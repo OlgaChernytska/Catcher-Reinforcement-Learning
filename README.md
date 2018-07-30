@@ -22,6 +22,8 @@ Algorithm:
 3.1) observe current state, select action, receive reward, observe next state;
 3.2) Update q-table using Bellman equation 
 
+- <img src="https://latex.codecogs.com/gif.latex? Q(s,a) := Q(s,a) + \alpha [r + \gamma max_{a'} Q(s',a') - Q(s,a)]" /> 
+
 $$Q(s,a) := Q(s,a) + \alpha [r + \gamma max_{a'} Q(s',a') - Q(s,a)]$$
 
 Agent is encouraged to explore by introducing epsilon value - share of random actions. Epsilon decreases with episodes played.
