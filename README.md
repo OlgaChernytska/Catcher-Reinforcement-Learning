@@ -1,8 +1,7 @@
 # Playing Catcher game with Reinforcement Learning
 
-![Q-Learning](https://github.com/OlgaChernytska/Catcher-Reinforcement-Learning/blob/master/figure/gif/catcher_q_learning.gif)
-
-![Neural Network](https://github.com/OlgaChernytska/Catcher-Reinforcement-Learning/blob/master/figure/gif/catcher_neural_network.gif) ![Cross-Entropy Method](https://github.com/OlgaChernytska/Catcher-Reinforcement-Learning/blob/master/figure/gif/catcher_cem.gif)
+Q-Learning                 Cross-Entropy Method               Neural Network       
+![Q-Learning](https://github.com/OlgaChernytska/Catcher-Reinforcement-Learning/blob/master/figure/gif/catcher_q_learning.gif)       ![Cross-Entropy Method](https://github.com/OlgaChernytska/Catcher-Reinforcement-Learning/blob/master/figure/gif/catcher_cem.gif)       ![Neural Network](https://github.com/OlgaChernytska/Catcher-Reinforcement-Learning/blob/master/figure/gif/catcher_neural_network.gif)
 
 
 ## Motivation
