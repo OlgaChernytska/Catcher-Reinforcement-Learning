@@ -7,7 +7,7 @@
 ![](https://github.com/OlgaChernytska/Catcher-Reinforcement-Learning/figures/gif/catcher_neural_network.gif)
 
 > Cross-Entropy Method
-![](https://github.com/OlgaChernytska/Catcher-Reinforcement-Learning/figures/gif/catcher_cem.gif)
+![](https://github.com/OlgaChernytska/Catcher-Reinforcement-Learning/blob/master/figure/gif/catcher_cem.gif)
 
 
 ## Motivation
