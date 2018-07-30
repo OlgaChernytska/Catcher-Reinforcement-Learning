@@ -77,5 +77,21 @@ Neural Networks can deal with any kind of game complexity, however, a lot of com
 
 ## Interpretation
 
-There is a lot
-Learning is ustable. It is highly depends what game states agent see at the beginning of the training. So all the algorithm have to be reinitialize several times not to just achieve good results, but launch training process at all.
+There is a lot of randomness while learning occurs. All algorithm are higly sensitive to what states agent sees and in what order throughout the training. While Q-table is initialized to contain zero, Cross-Entropy Method has one more randomness because of sampling from parameter distibution and Neural Network has randomness because of weight initialization. These are the reasons why sometimes algorithm does not train, why simetimes it stuck is some locat optima and sometimes train well. So algortithms were reinitialized several times to make training process work. 
+
+The figures below represent how different algorithms train. 
+
+> Figure 1. Q-Learning
+![](https://github.com/OlgaChernytska/Catcher-Reinforcement-Learning/blob/master/figure/plot/q_learning_plot.jpg.jpg)
+
+Comment. 10,000 episodes were needed to train an agent. To be mentioned, each point on the plot represents average among last 200 episodes, but even though line on the plot is unsmooth.
+
+> Figure 2. Cross-Entropy Method
+![](https://github.com/OlgaChernytska/Catcher-Reinforcement-Learning/blob/master/figure/plot/cem_plot.jpg)
+
+Comment. With an increase in elite member performance, general algorithm performance is increases, but gap between them is still significant. 
+
+> Figure 3. Neural Network
+![](https://github.com/OlgaChernytska/Catcher-Reinforcement-Learning/blob/master/figure/plot/neural_network_plot.jpg)
+
+Comment. About 8,000 episodes were needed to train an agent. Looks like neural network trains faster then Q-learning, but because of randomness mentioned above, this in not the case. Plot curve is highly unsmooth as well.
