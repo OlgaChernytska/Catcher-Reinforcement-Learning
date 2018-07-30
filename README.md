@@ -18,8 +18,10 @@ This algorithm learns values for every possible state-action pair. All the value
 Algorithm:
 1) Discretize states
 2) Initialize Q-table contain zeros
-3) Loop:
+3) Loop until convergence:
+
 3.1) observe current state, select action, receive reward, observe next state;
+
 3.2) Update q-table using Bellman equation 
 
 Q(s,a) := Q(s,a) + alpha * [r + gamma max_{a'} Q(s',a') - Q(s,a)]
