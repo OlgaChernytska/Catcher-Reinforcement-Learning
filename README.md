@@ -22,7 +22,7 @@ Algorithm:
 3.1) observe current state, select action, receive reward, observe next state;
 3.2) Update q-table using Bellman equation 
 
-- <img src="https://latex.codecogs.com/gif.latex? Q(s,a) := Q(s,a) + \alpha [r + \gamma max_{a'} Q(s',a') - Q(s,a)]" /> 
+- <img src="https://latex.codecogs.com/gif.latex?s=\text { sensor reading }  " /> 
 
 $$Q(s,a) := Q(s,a) + \alpha [r + \gamma max_{a'} Q(s',a') - Q(s,a)]$$
 
