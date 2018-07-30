@@ -1,2 +1,12 @@
-# Catcher-Reinforcement-Learning
-UCU / Reinforcement learning course project
+# Playing Catcher game with Reinforcement Learning
+
+
+### Q-Learning
+
+
+### Cross-Entropy Method
+
+
+### Neural Network
+
+
