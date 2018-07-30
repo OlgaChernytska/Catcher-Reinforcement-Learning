@@ -1,5 +1,15 @@
 # Playing Catcher game with Reinforcement Learning
 
+> Q-Learning
+![](https://github.com/OlgaChernytska/Catcher-Reinforcement-Learning/figures/gif/catcher_q_learning.gif)
+
+> Neural Network
+![](https://github.com/OlgaChernytska/Catcher-Reinforcement-Learning/figures/gif/catcher_neural_network.gif)
+
+> Cross-Entropy Method
+![](https://github.com/OlgaChernytska/Catcher-Reinforcement-Learning/figures/gif/catcher_cem.gif)
+
+
 ## Motivation
 Learn agent to play Catcher using Q-Learning, Cross-Entropy Method and Neural Network.
 
@@ -16,23 +26,21 @@ Metric to measure performance is number of timestamps (frames) that agent surviv
 This algorithm learns values for every possible state-action pair. All the values are stored in so called q-table, which has size of (number of discrete states) x (number of action). When playing, agent chooses actions based on q-table: action, that has the highest value among all the actions for the state is selected. 
 
 Algorithm:
-1) Discretize states
-2) Initialize Q-table contain zeros
-3) Loop until convergence:
-
-3.1) observe current state, select action, receive reward, observe next state;
-
-3.2) Update q-table using Bellman equation 
+1) Discretize states.
+2) Initialize Q-table contain zeros.
+3) Loop until convergence: 
+3.1) observe current state, select action, receive reward, observe next state; 
+3.2) Update q-table using Bellman equation:
 
 Q(s,a) := Q(s,a) + alpha * [r + gamma max_{a'} Q(s',a') - Q(s,a)]
 
 Agent is encouraged to explore by introducing epsilon value - share of random actions. Epsilon decreases with episodes played.
 
-Q-Learning is powerful and easy to implement. However, with the increase in dimensionality of vector that represents state, number of discrete states increases rapidly and q-table becomes hard to learn. Additionally, there is no generalization - agent does not know what to do in the states he never observed and cannot infer action from observed other states. 
+Q-Learning is powerful and easy to implement. However, with the increase in dimensionality of state vector , number of discrete states increases rapidly and q-table becomes hard to learn. Additionally, there is no generalization - agent does not know what to do in the states he never observed and cannot infer action from observed other states. 
 
 - Cross-Entropy Method
 
-This method can be used for continuous state vector and there is no need in discretization. Goal is to find the best set of parameters - thetas, such that if agent uses the  policy "If thetas.T * state > 0 , then Left, otherwise, Right" -- then he wins. Function F that evaluates the performance of the parameter vector is just number of timestamps survived - the more the better.
+This method can be used for continuous state vector and there is no need in discretization. Goal is to find the best set of parameters - thetas, such that if agent uses the policy "If thetas.T * state > 0 , then Left, otherwise, Right" -- then he wins. Function F that evaluates the performance of the parameter vector is just number of timestamps survived - the more the better.
 
 Algorithm:
 1) Select batch size N and fraction of so called elite members - p.
@@ -51,7 +59,7 @@ Neural Networks show good result in all the Machine Learning fields and Reinforc
 
 
 Algorithm:
-1) Create network architecture and initialize weights. Number of input neurones is equal to dimensionality of state vector plus dimensionality of action set. There are is one output neurones. It outputs q-value. This is regression problem, so mean squared loss should be used.
+1) Create network architecture and initialize weights. Number of input neurones is equal to dimensionality of state vector plus dimensionality of action set. There is one output neuron with is q-value. This is regression problem, so mean squared error should be used as cost function.
 2) Initialize memory array to store state, action, reward and next state, initialize its size - B. Network will be trained using batches of size B.
 3) Loop until convergence:
 2.1) Play B states until memory array is full. Store state, action, reward and next state in the memory array. 
@@ -64,7 +72,6 @@ Epsilon trick is used here as well.
 
 Neural Networks can deal with any kind of game complexity, however, a lot of computational power is needed to train them.
 
-
 ## Deliverables
 
 - [x] notebooks - 3 notebooks for learning model
@@ -73,8 +80,7 @@ Neural Networks can deal with any kind of game complexity, however, a lot of com
 - [x] demo - demonstration how agent learns to play
 
 
-
-
 ## Interpretation
 
-Learning is ubstable. It is highly depends what game states agent see at the beginning of the training. So all the algorithm have to be reinitialize several times not to just achieve good results, but launch training process at all.
+There is a lot
+Learning is ustable. It is highly depends what game states agent see at the beginning of the training. So all the algorithm have to be reinitialize several times not to just achieve good results, but launch training process at all.
