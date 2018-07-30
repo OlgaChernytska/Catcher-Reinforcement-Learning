@@ -77,9 +77,7 @@ Neural Networks can deal with any kind of game complexity, however, a lot of com
 
 ## Interpretation
 
-There is a lot of randomness while learning occurs. All algorithm are higly sensitive to what states agent sees and in what order throughout the training. While Q-table is initialized to contain zero, Cross-Entropy Method has one more randomness because of sampling from parameter distibution and Neural Network has randomness because of weight initialization. These are the reasons why sometimes algorithm does not train, why simetimes it stuck is some locat optima and sometimes train well. So algortithms were reinitialized several times to make training process work. 
-
-The figures below represent how different algorithms train. 
+There is a lot of randomness while learning occurs. All algorithm are higly sensitive to what states agent sees and in what order throughout the training. While Q-table is initialized to contain zeros, Cross-Entropy Method has one more randomness because of sampling from parameter distibution and Neural Network has randomness because of weight initialization. These are the reasons why sometimes algorithm does not train, why sometimes it stucks in some locat optima and sometimes it trains well. So algorithms were reinitialized several times to make training process work. Figures below represent how different algorithms train. 
 
 > Figure 1. Q-Learning
 
@@ -91,7 +89,7 @@ Comment. 10,000 episodes were needed to train an agent. To be mentioned, each po
 
 ![](https://github.com/OlgaChernytska/Catcher-Reinforcement-Learning/blob/master/figure/plot/cem_plot.jpg)
 
-Comment. With an increase in elite member performance, general algorithm performance is increases, but gap between them is still significant. 
+Comment. With an increase in elite member performance, general algorithm performance increases, but gap between them is still significant. 
 
 > Figure 3. Neural Network
 
