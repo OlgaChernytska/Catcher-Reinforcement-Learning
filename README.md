@@ -22,9 +22,7 @@ Algorithm:
 3.1) observe current state, select action, receive reward, observe next state;
 3.2) Update q-table using Bellman equation 
 
-- <img src="https://latex.codecogs.com/gif.latex?s=\text { sensor reading }  " /> 
-
-$$Q(s,a) := Q(s,a) + \alpha [r + \gamma max_{a'} Q(s',a') - Q(s,a)]$$
+Q(s,a) := Q(s,a) + alpha * [r + gamma max_{a'} Q(s',a') - Q(s,a)]
 
 Agent is encouraged to explore by introducing epsilon value - share of random actions. Epsilon decreases with episodes played.
 
@@ -57,7 +55,7 @@ Algorithm:
 2.1) Play B states until memory array is full. Store state, action, reward and next state in the memory array. 
 2.2) Make sure that state vector entries are normalized.
 2.3) Create x and y vectors for every observation. Vector x is concatenated inputs state vector (normalized) and one-hot encoded action vector. Vector y has to be generated from network with current weights using Bellman equation: 
-$$y = Q(s,a)  = r + \gamma max_{a'} Q(s',a')$$. 
+y = Q(s,a)  = r + gamma * max_{a'} Q(s',a').
 3.4) Train network for all samples in the batch.
 3.5) Empty memory array.
 Epsilon trick is used here as well.
