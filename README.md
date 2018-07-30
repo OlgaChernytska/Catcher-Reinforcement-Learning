@@ -1,6 +1,6 @@
 # Playing Catcher game with Reinforcement Learning
 
-> Real demonstration how agent plays learned by (left to right) Q-Learning, Cross-Entropy Method and Neural Network
+> Real demonstration how agent plays learned by (left to right) Q-Learning, Cross-Entropy Method and Neural Network.
 
 ![Q-Learning](https://github.com/OlgaChernytska/Catcher-Reinforcement-Learning/blob/master/figure/gif/catcher_q_learning.gif) ![Cross-Entropy Method](https://github.com/OlgaChernytska/Catcher-Reinforcement-Learning/blob/master/figure/gif/catcher_cem.gif) ![Neural Network](https://github.com/OlgaChernytska/Catcher-Reinforcement-Learning/blob/master/figure/gif/catcher_neural_network.gif)
 
@@ -82,16 +82,19 @@ There is a lot of randomness while learning occurs. All algorithm are higly sens
 The figures below represent how different algorithms train. 
 
 > Figure 1. Q-Learning
-![](https://github.com/OlgaChernytska/Catcher-Reinforcement-Learning/blob/master/figure/plot/q_learning_plot.jpg.jpg)
+
+![](https://github.com/OlgaChernytska/Catcher-Reinforcement-Learning/blob/master/figure/plot/q_learning_plot.jpg)
 
 Comment. 10,000 episodes were needed to train an agent. To be mentioned, each point on the plot represents average among last 200 episodes, but even though line on the plot is unsmooth.
 
 > Figure 2. Cross-Entropy Method
+
 ![](https://github.com/OlgaChernytska/Catcher-Reinforcement-Learning/blob/master/figure/plot/cem_plot.jpg)
 
 Comment. With an increase in elite member performance, general algorithm performance is increases, but gap between them is still significant. 
 
 > Figure 3. Neural Network
+
 ![](https://github.com/OlgaChernytska/Catcher-Reinforcement-Learning/blob/master/figure/plot/neural_network_plot.jpg)
 
 Comment. About 8,000 episodes were needed to train an agent. Looks like neural network trains faster then Q-learning, but because of randomness mentioned above, this in not the case. Plot curve is highly unsmooth as well.
